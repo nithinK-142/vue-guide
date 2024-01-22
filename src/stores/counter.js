@@ -9,7 +9,8 @@ export const useCounterStore = defineStore("counter", {
       this.count += val;
     },
     decrement() {
-      this.count--;
+      if (this.count > 0) this.count--;
+      else alert("count cannot be zero!");
     },
     async waitAndAdd() {
       setTimeout(() => {
