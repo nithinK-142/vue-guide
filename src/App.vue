@@ -11,9 +11,9 @@
         >About</RouterLink
       >
       <RouterLink
-        to="/contact-us"
-        :class="{ 'active-link': $route.path === '/contact-us' }"
-        >Contact Us</RouterLink
+        to="/posts"
+        :class="{ 'active-link': $route.path === '/posts' }"
+        >Posts</RouterLink
       >
     </nav>
   </main>
@@ -27,5 +27,18 @@ import { RouterLink, RouterView } from "vue-router";
 <style scoped>
 .active-link {
   background-color: hsla(160, 100%, 37%, 0.2);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+nav {
+  font-size: 1.2em;
+  padding-inline: 1rem;
 }
 </style>
