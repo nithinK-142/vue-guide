@@ -2,19 +2,15 @@
   <main>
     <h1>Vue Demo App</h1>
     <nav>
-      <RouterLink to="/" :class="{ 'active-link': $route.path === '/' }"
-        >Home</RouterLink
-      >
-      <RouterLink
-        to="/about"
-        :class="{ 'active-link': $route.path === '/about' }"
-        >About</RouterLink
-      >
-      <RouterLink
-        to="/posts"
-        :class="{ 'active-link': $route.path === '/posts' }"
-        >Posts</RouterLink
-      >
+      <ul>
+        <li v-for="link in navLinks" :key="link.title">
+          <RouterLink
+            :to="`${link.to}`"
+            :class="{ 'active-link': $route.path === link.to }"
+            >{{ link.title }}</RouterLink
+          >
+        </li>
+      </ul>
     </nav>
   </main>
   <RouterView />
@@ -22,6 +18,22 @@
 
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import { ref } from "vue";
+
+const navLinks = ref([
+  {
+    to: "/",
+    title: "Home",
+  },
+  {
+    to: "/about",
+    title: "About",
+  },
+  {
+    to: "/posts",
+    title: "Posts",
+  },
+]);
 </script>
 
 <style scoped>
@@ -39,6 +51,14 @@ main {
 
 nav {
   font-size: 1.2em;
-  padding-inline: 1rem;
+}
+
+nav ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  padding-inline: .4rem;
 }
 </style>
