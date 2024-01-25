@@ -1,1 +1,1 @@
-# Vue Demo App
+# Vue Guide
