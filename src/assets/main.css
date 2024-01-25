@@ -1,7 +1,25 @@
-body{
-  background-color: #212121;
-  color: white;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+  text-align: center;
+  padding-block: 1rem;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
