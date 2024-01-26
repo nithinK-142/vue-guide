@@ -1,5 +1,5 @@
 <template>
   <main>
-    <h1>Vue Guide</h1>
+    <h1 class="text-2xl">Vue Guide</h1>
   </main>
 </template>
