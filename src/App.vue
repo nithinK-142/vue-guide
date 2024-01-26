@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import { Button } from '@/components/ui/button'
 </script>
 
 <template>
@@ -9,14 +8,12 @@ import { Button } from '@/components/ui/button'
     <div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
+        <RouterLink to="/accordion">Accordion</RouterLink>
+        <RouterLink to="/button">Button</RouterLink>
+        <RouterLink to="/modal">Modal</RouterLink>
       </nav>
     </div>
     <RouterView />
-    <div class="pt-4">
-      <Button variant="destructive">Button</Button>
-    </div>
   </main>
 </template>
 
