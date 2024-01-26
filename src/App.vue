@@ -4,18 +4,20 @@ import { Button } from '@/components/ui/button'
 </script>
 
 <template>
-  <h1>Vue Guide</h1>
-  <div class="wrapper">
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/contact">Contact</RouterLink>
-    </nav>
-  </div>
-  <RouterView />
-  <div class="pt-4">
-    <Button>Button</Button>
-  </div>
+  <main class="flex flex-col items-center">
+    <h1>Vue Guide</h1>
+    <div>
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/contact">Contact</RouterLink>
+      </nav>
+    </div>
+    <RouterView />
+    <div class="pt-4">
+      <Button variant="destructive">Button</Button>
+    </div>
+  </main>
 </template>
 
 <style scoped>
@@ -34,18 +36,14 @@ nav {
   display: flex;
 }
 nav a.router-link-exact-active {
-  color: green;
   background-color: hsla(160, 100%, 37%, 0.2);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
 }
 
 nav a {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 0.3rem 1rem;
   border-left: 1px solid var(--color-border);
+  border-radius: 4px;
 }
 
 nav a:first-of-type {
