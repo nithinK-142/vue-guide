@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { Button } from '@/components/ui/button'
 </script>
 
 <template>
@@ -12,6 +13,9 @@ import { RouterLink, RouterView } from 'vue-router'
     </nav>
   </div>
   <RouterView />
+  <div class="pt-4">
+    <Button>Button</Button>
+  </div>
 </template>
 
 <style scoped>
@@ -30,7 +34,8 @@ nav {
   display: flex;
 }
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: green;
+  background-color: hsla(160, 100%, 37%, 0.2);
 }
 
 nav a.router-link-exact-active:hover {
