@@ -14,11 +14,13 @@
     </nav>
   </main>
   <RouterView />
+  <Login />
 </template>
 
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import { ref } from "vue";
+import Login from "./components/Login.vue";
 
 const navLinks = ref([
   {

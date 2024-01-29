@@ -1,11 +1,11 @@
 <script setup>
-import Login from "@/components/Login.vue";
+// import Login from "@/components/Login.vue";
 </script>
 
 <template>
   <div>
     <h1>Authenticate</h1>
-    <Login />
+    <!-- <Login /> -->
   </div>
 </template>
 
