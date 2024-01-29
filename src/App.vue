@@ -30,8 +30,8 @@ const navLinks = ref([
     title: "About",
   },
   {
-    to: "/posts",
-    title: "Posts",
+    to: "/login",
+    title: "Login",
   },
 ]);
 </script>
@@ -59,6 +59,6 @@ nav ul {
 
 li {
   list-style: none;
-  padding-inline: .4rem;
+  padding-inline: 0.4rem;
 }
 </style>
