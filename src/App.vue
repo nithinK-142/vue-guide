@@ -23,7 +23,7 @@ onMounted(async () => {
   <main class="flex flex-col items-center text-center">
     <h1 class="text-2xl">Vue Guide</h1>
 
-    <div class="mt-10 w-72 sm:w-80 sm:floating-scrollbar">
+    <div v-if="branches" class="mt-10 w-72 sm:w-80 sm:floating-scrollbar">
       <div
         v-for="({ branch, link }, index) in branches"
         :key="index"
@@ -50,5 +50,6 @@ onMounted(async () => {
         </a>
       </div>
     </div>
+    <p v-else class="mt-10 text-xl text-center">loading...</p>
   </main>
 </template>
