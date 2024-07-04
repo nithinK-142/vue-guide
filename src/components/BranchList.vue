@@ -13,7 +13,7 @@ const error = ref<string | null>(null)
 
 onMounted(async () => {
   try {
-    const response = await axios.get(import.meta.env.VITE_API_BRANCH_URL)
+    const response = await axios.get(import.meta.env.VITE_BRANCH_SENTINEL_URL)
     branches.value = response.data
     loading.value = false
   } catch (err) {
